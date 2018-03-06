@@ -18,7 +18,7 @@ WIN_COMBINATIONS = [
 #/["X", "X", "X", "O", "O", " ", " ", " ", " "]
 def won?(board)
   WIN_COMBINATIONS.detect do |combination|
-    board[combination[0]] == board[combination[1]] && board[combination[0]] == board[combination[2]]
-    && position_taken?(board, combination[0]) 
+    board[combination[0]] == board[combination[1]] && board[combination[0]] == board[combination[2]] &&
+    position_taken?(board, combination[0]) 
   end
 end
