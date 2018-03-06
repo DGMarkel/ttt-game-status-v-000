@@ -24,6 +24,7 @@ def won?(board)
         win_index
       elsif board[winner] == "" || board[winner] == " "
         false
+      end
+    end
   end
-end
 end
