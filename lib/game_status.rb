@@ -23,12 +23,11 @@ def won?(board)
         matches << board[wins]
         if matches == ["X", "X", "X"] || matches == ["O", "O", "O"]
           WIN_COMBINATIONS[wins]
-        else 
+        else
           false
           matches = []
+        end
       end
     end
-  end   
+  end
 end
-        
-    
