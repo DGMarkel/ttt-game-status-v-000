@@ -19,12 +19,11 @@ def won?(board)
   WIN_COMBINATIONS.any? do |win_index|
     win_index.all? do |winner|
       if board[winner] == "X"
-        win_index
       elsif board[winner] == "O"
-        win_index
       elsif board[winner] == "" || board[winner] == " "
         false
       end
     end
+    win_index
   end
 end
