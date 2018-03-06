@@ -17,8 +17,8 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   matches = []
-  WIN_COMBINATIONS.each do |all_possible_wins|
-    all_possible_wins.each do |wins|
+  WIN_COMBINATIONS.each do |win_index|
+    all_possible_wins.each do |win_combination|
       if board[wins] == "X" || board[wins] == "O"
         matches << board[wins]
         if matches == ["X", "X", "X"] || matches == ["O", "O", "O"]
