@@ -24,7 +24,6 @@ def won?(board)
         if matches == ["X", "X", "X"] || matches == ["O", "O", "O"]
           all_possible_wins[wins]
         else
-          false
           matches = []
         end
       end
