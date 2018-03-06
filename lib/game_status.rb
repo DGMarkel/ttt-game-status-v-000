@@ -20,10 +20,6 @@ def won?(board)
     win_index.all? do |winner|
       board[winner] == "X"
       win_index
-    end
-    win_index.all? do |winner|
-    board[winner] == "O"
-    win_index
   end
 end
 end
