@@ -35,5 +35,7 @@ end
 
 def over?(board)
  draw?(board) || full?(board) || won?(board)
-
 end
+
+def won?(board)
+  board[combination[0]]
