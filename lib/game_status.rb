@@ -19,6 +19,6 @@ def won?(board)
   WIN_COMBINATIONS.any? do |win_index|
     win_index.all? do |winner|
       board[winner] == "X"
-    end
+      board[winner] == "O"
   end
 end
