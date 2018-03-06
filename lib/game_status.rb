@@ -22,7 +22,7 @@ def won?(board)
       if board[win_combination] == "X" || board[win_combination] == "O"
         matches << board[win_combination]
         if matches == ["X", "X", "X"] || matches == ["O", "O", "O"]
-          win_index[win_combination]
+          matches
         else
           matches = []
         end
