@@ -23,6 +23,7 @@ def won?(board)
     end
     win_index.all? do |winner|
     board[winner] == "O"
+    win_index
   end
 end
 end
