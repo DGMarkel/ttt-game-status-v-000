@@ -32,3 +32,7 @@ end
 def draw?(board)
   !won?(board) && full?(board)
 end
+
+def over?
+ draw?(board) || full?(board) || won?(board)
+end
