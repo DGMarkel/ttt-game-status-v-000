@@ -39,5 +39,4 @@ end
 
 def winner(board)
   won?(board)
-  board[combination[0]]
 end
