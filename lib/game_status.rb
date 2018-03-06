@@ -15,16 +15,10 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+#/["X", "X", "X", "O", "O", " ", " ", " ", " "]
 def won?(board)
-  WIN_COMBINATIONS.any? do |win_index|
-    win_index.all? do |winner|
-      if board[winner] == "X"
-        win_index.to_a
-      elsif board[winner] == "O"
-        win_index
-      elsif board[winner] == "" || board[winner] == " "
-        false
-      end
-    end
+  WIN_COMBINATIONS.detect do |combination|
+    combination[0] == combination[1] && combination[0] == combination[2]
+    combination
   end
 end
