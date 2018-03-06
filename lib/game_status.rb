@@ -14,3 +14,21 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+
+def won?(board)
+  matches = []
+  WIN_COMBINATIONS.each do |all_possible_wins|
+    all_possible_wins.each do |wins|
+      if board[wins] == "X" || board[wins] == "O"
+        matches << board[wins]
+        if matches == ["X", "X", "X"] || matches == ["O", "O", "O"]
+          WIN_COMBINATIONS[wins]
+        else 
+          false
+          matches = []
+      end
+    end
+  end   
+end
+        
+    
