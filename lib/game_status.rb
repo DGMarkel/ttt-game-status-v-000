@@ -16,17 +16,13 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  matches = []
   WIN_COMBINATIONS.each do |win_index|
-    win_index.each do |win_combination|
-      if board[win_combination] == "X" || board[win_combination] == "O"
-        matches << board[win_combination]
-        if matches == ["X", "X", "X"] || matches == ["O", "O", "O"]
+      matches = [board[win_index[0]], board[win_index[1]], board[win_index[2]]]
+      if matches == win_index
           matches
         else
-          matches = []
+        false
         end
       end
     end
-  end
-end
+
